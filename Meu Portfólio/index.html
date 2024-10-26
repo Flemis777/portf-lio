@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/jogador-de-basquete.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonte do Projeto Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <title>Meu Portfólio</title>
+</head>
+
+<body>
+    <!-- Menu -->
+    <header class="cabecalho">
+        <img class="cabecalho__logo" src="imagens/auto_awesome_black_24dp 1.png" alt="Logo">
+        <h1 class="cabecalho__titulo">Murilo Gomes</h1>
+        <nav class="navegacao">
+            <ul class="navegacao__lista">
+                <li class="navegacao__elemento"><a href="#sobre-mim">Sobre mim</a></li>
+                <li class="navegacao__elemento"><a href="#habilidades">Habilidades</a></li>
+                <li class="navegacao__elemento"><a href="#hobbies">Hobbies</a></li>
+                <li class="navegacao__elemento"><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Apresentação -->
+    <section class="apresentacao">
+        <img class="apresentacao__foto" src="imagens/fotinhaminha.png" alt="Foto de perfil">
+        <div class="apresentacao__conteiner">
+            <h2 class="apresentacao__titulo">Olá, me chamo <strong class="nome__detalhes">Murilo Gomes</strong> e construo páginas na web!</h2>
+            <p class="apresentacao__subtitulo">Sou aluno do projeto Oracle ONE na Alura Latam.</p>
+            <ul class="redes">
+                <li class="redes__elemento"><a href="https://github.com/Flemis777" target="_blank">Github <img src="imagens/arrow_back_black_24dp 1.png" alt="Seta"></a></li>
+                <li class="redes__elemento"><a href="https://www.linkedin.com/in/muriloflemis" target="_blank">Linkedin<img src="imagens/arrow_back_black_24dp 1.png" alt="Seta"></a></li>
+                <li class="redes__elemento"><a href="https://www.instagram.com/murilo_flemixx/" target="_blank">Instagram<img src="imagens/arrow_back_black_24dp 1.png" alt="Seta"></a></li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+
+    <!-- Seção sobre mim -->
+    <section class="sobre-mim" id="sobre-mim">
+        <h2 class="sobre-mim__titulo">Sobre mim</h2>
+        <p class="sobre-mim__texto">Olá! Sou um jovem programador apaixonado por tecnologia e pela constante busca por aprendizado. Adoro explorar novas ferramentas e linguagens de programação, sempre em busca de maneiras de aprimorar minhas habilidades.</p>
+        <p class="sobre-mim__texto">Além do mundo da programação, tenho uma curiosidade insaciável por conhecer coisas novas, seja em viagens, livros ou conversas com pessoas interessantes. Acredito que evoluir profissionalmente e como ser social é fundamental, e estou sempre aberto a novas experiências que me ajudem a crescer em ambas as áreas.</p>
+    </section>
+    <hr>
+
+    <!-- Seção de Habilidades -->
+    <section class="habilidades" id="habilidades">
+        <h2 class="habilidades__titulo">Habilidades</h2>
+        <ul class="habilidades__lista">
+            <li class="habilidades__elemento">
+                <img class="habilidades__icone" src="imagens/.png" alt="HTML">
+                <p class="habilidades__nome">HTML 5</p>
+            </li>
+            <li class="habilidades__elemento">
+                <img class="habilidades__icone" src="imagens/.png" alt="JavaScript">
+                <p class="habilidades__nome">JavaScript</p>
+            </li>
+            <li class="habilidades__elemento">
+                <img class="habilidades__icone" src="imagens/css-file 1.png" alt="CSS">
+                <p class="habilidades__nome">CSS</p>
+            </li>
+        </ul>
+    </section>
+    <hr>
+
+    <!-- Seção de Hobbies -->
+    <section class="hobbies" id="hobbies">
+        <h2 class="hobbies__titulo">Hobbies</h2>
+        <ul class="hobbies__lista">
+            <li class="hobbies__elemento">
+                <img class="hobbies__icone" src="imagens/tennis (1).png" alt="Esportes">
+                <p class="hobbies__nome">Praticar Esportes</p>
+            </li>
+            <li class="hobbies__elemento">
+                <img class="hobbies__icone" src="imagens/Group.png" alt="Ouvir música">
+                <p class="hobbies__nome">Ouvir música</p>
+            </li>
+            <li class="hobbies__elemento">
+                <img class="hobbies__icone" src="imagens/Vector (1).png" alt="Assistir séries">
+                <p class="hobbies__nome">Assistir séries</p>
+            </li>
+        </ul>
+    </section>
+    <hr>
+
+    <!-- Seção de Contato -->
+    <section class="contato" id="contato">
+        <img class="contato__foto" src="imagens/Captura de tela 2024-10-25 205316.png" alt="Imagem ilustrativa de pessoa enviando email">
+        <section class="contato__dados">
+            <h2 class="contato__titulo">Contato</h2>
+            <p>Quer Entrar em Contato Comigo? Preencha o formulário para que possamos conversar.</p>
+                <form class="contato__formulario" action="send_email.php" method="POST">
+
+                    <input class="contato__campo" type="text" id="name" name="name" placeholder="Nome" required oninput="nameValidate()">
+                    <span class="campo__span">Nome deve ter no minimo 3 caracteres</span>
+
+                    <input class="contato__campo" type="email" id="email" name="email" placeholder="E-mail" required oninput="emailValidate()">
+                    <span class="campo__span">Digite um email válido</span>
+                    <textarea class="contato__campo contato__campo--textarea" id="message" name="message" placeholder="Mensagem" required></textarea>
+                    <input class="contato__botao" type="submit" value="Enviar">
+                </form>
+        </section>
+    </section>
+    <footer class="rodape">
+        <p>Desenvolvido por <a href="https://www.linkedin.com/in/muriloflemis" target="_blank">Murilo Gomes</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
